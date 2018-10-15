@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Movie Trivia</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="JS/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="JS/bootstrap.min.js"></script>
+    <!-- Angular JS -->
+    <script src="JS/angular.min.js"></script>
+    <script src="JS/angular-ui-router.min.js"></script>
+    <!-- Movie Trivia APP JS -->
+    <script src="JS/app.js"></script>
+</head>
+<body>
+    <!-- App module -->
+    <div ng-app="movieTriviaApp">
+        <!-- App controller -->
+        <div ng-controller="movieTriviaCtrl">
+
+            <!-- Game header -->
+            <header style="background:mediumpurple;color:white;text-align:center;padding:10px;">
+                <h3>Movie Trivia</h3>
+            </header>
+
+            <!-- Game content card -->
+            <div class="card col-sm-6" style="margin:30px auto; padding:10px;">
+
+                <!-- Used to load different templates -->
+                <div id="movieTriviaContent" ui-view>
+                </div>
+
+                <!-- Alert Modal -->
+                <div class="modal" id="mModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="text-align: center;">
+                            <div id="mHeader" class="modal-header" style="color:#fff;">
+                                <h4 class="modal-title">{{mHead}}</h4>
+                            </div>
+                            <div class="modal-body" style="font-weight:600;">
+                                {{mBody}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

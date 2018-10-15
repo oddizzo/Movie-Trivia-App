@@ -1,0 +1,25 @@
+﻿<!-- Game template-->
+<div class="jumbotron text-center" style="margin:0px; padding:0px; border-radius:0px; height:500px;" ng-init="startGame()">
+    <div>
+
+        <!-- Game points section -->
+        <div class="row bg-primary" style="height:40px; padding:0px 0px; margin:0px; font-weight:400; color:#fff;">
+            <div class="col-6" style="padding:10px;">
+                <div style="background:#fff; width:120px; color:#007bff; border-radius:5px; text-align:center; float:left;">Quesion: <span>{{question}}</span>/8</div>
+            </div>
+            <div class="col-6" style="padding:10px;">
+                <div style="background:#fff; width:120px; color:#007bff; border-radius:5px; text-align:center; float:right;">Points: <span>{{points}}</span></div>
+            </div>
+        </div>
+
+        <!-- Game questions section -->
+        <div class="col-sm-6" style="margin:0 auto;">
+            <h5 style="text-align:center; margin:10px; color:mediumpurple;">{{movieTitle}}</h5>
+            <center><img style="max-height:250px;" src="{{movieImage}}" height="250" /></center>
+            <p style="text-align:center; margin:10px; color:mediumpurple; font-weight:500;">What year was the movie released?</p>
+            <input id="aInput" style="display:block; width:300px; padding:5px; border:1px mediumpurple solid; border-radius:.25rem; margin:0 auto;" placeholder="Enter your answer..." ng-model="answer" />
+            <button type="button" class="btn btn-success" style="display:block; width:300px; margin:10px auto;" ng-click="nextGame()">Next</button>
+        </div>
+
+    </div>
+</div>
